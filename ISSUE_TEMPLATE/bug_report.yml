@@ -1,0 +1,50 @@
+name: Something is broken
+description: Software that doesn't do what it says, or a document that's wrong.
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. You don't need to fill in every field — the
+        first two are the ones that matter.
+
+        **If this is a safety problem in one of the hardware designs** (battery,
+        high voltage, combustion, structural), please say so in the title. Those
+        get looked at first.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, and what the result was.
+      placeholder: |
+        I opened X and clicked Y. It showed Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Which file, page, document or screen. A link or path is ideal.
+      placeholder: 'docs/electrical/pack-layout.md, or the configurator page'
+
+  - type: input
+    id: environment
+    attributes:
+      label: Your setup
+      description: Only relevant for software. Operating system, browser, version — whatever you know.
+      placeholder: 'Windows 11, or Firefox 140 on macOS'
+
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: Anything else
+      description: Screenshots, error text, a link to the source you're citing. Paste freely.
