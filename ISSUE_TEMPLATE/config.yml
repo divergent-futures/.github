@@ -1,1 +1,11 @@
-
+blank_issues_enabled: true
+contact_links:
+  - name: Correction to something published
+    url: mailto:tj@divergentfutures.co
+    about: A wrong number, a misread source, a bad claim on a site or in a video. Corrections get published, not quietly edited.
+  - name: Security vulnerability
+    url: https://github.com/divergent-futures/.github/blob/main/SECURITY.md
+    about: Please report privately by email rather than opening a public issue.
+  - name: The websites
+    url: https://divergentfutures.co
+    about: Divergent Futures, Humans in Space, Living on the Spectrum, and Cosmos.
