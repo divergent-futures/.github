@@ -1,0 +1,50 @@
+name: A number or claim is wrong
+description: An engineering figure, a cited study, or a factual claim that doesn't hold up.
+labels: ['correction']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most useful kind of issue you can open here. You don't need
+        to supply a fix — showing the problem is enough.
+
+  - type: input
+    id: where
+    attributes:
+      label: Where is it
+      description: File, page, or document. A link or line reference is ideal.
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: What it currently says
+      description: Quote it, so there's no ambiguity about what's being disputed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Why it's wrong
+      description: The calculation, the misread, the outdated figure, the assumption that doesn't hold.
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source, if you have one
+      description: A paper, a datasheet, a measurement you took. Not required — a sound argument is also a source.
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How sure are you
+      options:
+        - Certain — this is straightforwardly wrong
+        - Fairly confident
+        - Suspicious, worth a second look
+    validations:
+      required: true
