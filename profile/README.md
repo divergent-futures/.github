@@ -1,43 +1,55 @@
-# Divergent Futures
+# .github
 
-> Honest extrapolation of technology — built, not asserted.
+This special repository does two jobs for the whole **Divergent Futures**organisation.
 
-**Divergent Futures** explores where technology is actually heading by building real, buildable *proof-of-frame* objects: things that demonstrate a thesis through engineering rather than argument. If an idea about the future is right, you should be able to build the object that proves it — and if it's wrong, building it is how you find out.
+## 1. The organisation profile
 
-Everything here is **open source**. This isn't a money project; it's an extrapolation of technology for everyone.
+`profile/README.md` is the page shown at[github.com/divergent-futures](https://github.com/divergent-futures).
 
----
+> **This only works if the repository is named exactly `.github`.**A repo named anything else — `dotgithub`, `divergent-futures-dotgithub`,`github` — will not render, and the organisation page falls back to a barerepo list.
 
-## Two lines of work
+That page is where the hierarchy is drawn explicitly: parent at the top, thechannels beneath it, projects grouped under each. GitHub can't nest anything, sothis is the one place the structure is stated rather than implied. **When achannel or project is added, update it here.**
 
-**Humans in Space** — how people actually live off Earth. Anchored by **HABITAT**, a closed-loop habitat proof-of-frame that builds on ESA's MELiSSA closed-loop life-support chemistry: nitrogen recovery, salt management, and the genuinely hard problems of a sealed bio-loop.
+## 2. Default community health files
 
-**Terrestrial Technology** — the same thinking, applied on the ground. Anchored by the **[Divergent House Bus](https://github.com/divergent-futures/divergent-house-bus)**: an integrated, all-electric, self-moving dwelling that treats heat and energy as things to *reuse*, not waste — and quietly asks what happens when a home decouples from the land.
+Every file below is **inherited by every repository in the organisation thatdoesn't have its own copy**. Write it once here, and all repos get it.
 
-The two lines turn out to solve the same problems at different scales — closed loops, integrated thermal-electrical systems, honest energy balances. In places the space module and the house bus are solving the *same* closed-loop chemistry.
+| File | What it does |
+| --- | --- |
+| `CONTRIBUTING.md` | Shown when someone opens an issue or PR |
+| `CODE_OF_CONDUCT.md` | Linked from the community tab of every repo |
+| `SECURITY.md` | Shown under the "Security" tab; tells people how to report privately |
+| `ISSUE_TEMPLATE/` | The forms people see when opening an issue |
+| `PULL_REQUEST_TEMPLATE.md` | Pre-fills the PR description box |
 
----
+A repo that needs different rules just adds its own copy of that one file — itoverrides the default without affecting anything else.
 
-## How we think
+**`LICENSE` is not inherited.** Licences have to live in each repository. That'sa GitHub rule, not a choice.
 
-- **Cross-connections — integration over invention.** The next leap usually lives in connecting existing technologies, not inventing new ones.
-- **Crossovers.** Watching for the inflection points — the horse-to-car, landline-to-mobile moments — and naming what they cost as well as what they unlock.
-- **Nature as blueprint.** Closed-loop, circular systems; a dwelling that metabolises like an organism rather than consuming like an appliance.
-- **Honest extrapolation.** Argue the optimistic case as a working hypothesis, then run the test and name exactly what could make it fail. Built to be reviewed in five years and either right, or instructively wrong.
+## The naming convention this org uses
 
----
+Every repository is prefixed with **what it is**, because GitHub sorts reposalphabetically and the prefix decides how the list groups itself:
 
-## Projects
+| Prefix | Division | Means |
+| --- | --- | --- |
+| `hw-` | Hardware | Physical things, built from documentation |
+| `app-` | Applications | Software a stranger installs and runs |
+| `lab-` | Research | Models, calculators, analyses — produces answers, not tools |
+| `ops-` | Studio | The machinery that runs Divergent Futures, websites included |
 
-| Project | Line | Status |
-|---|---|---|
-| [divergent-house-bus](https://github.com/divergent-futures/divergent-house-bus) | Terrestrial Technology | Public — active design |
-| HABITAT | Humans in Space | Coming |
+**Placing a new project — first match wins:**
 
----
+1. Does it exist physically, or is it a design for something that will? → `hw-`
+2. Would a stranger download and run it? → `app-`
+3. Does its output answer a question rather than perform a task? → `lab-`
+4. Does it exist so the studio can operate? → `ops-`
 
-## Get involved
+If two apply, pick the one that describes *who uses it*.
 
-Issues, ideas, and pull requests are welcome — especially from people who build things. Watch the repositories to follow the work as it happens. Nothing here is behind a wall.
+**Channel is a topic, not a prefix** — `divergent-futures`,`humans-in-space`, `living-on-the-spectrum`, `cosmos`. A repo can carry several.That way the list groups by division when you scan it, and by channel when youfilter it, and a fifth channel costs one new topic string rather than a rename.
 
-*Building the future in the open.*
+Full reasoning and the scaling rules live in `GITHUB-STRUCTURE.md` alongside thewebsites repo.
+
+## Editing
+
+These are plain markdown files. Change one, commit, and every repo in theorganisation picks it up immediately — there's nothing to deploy.
